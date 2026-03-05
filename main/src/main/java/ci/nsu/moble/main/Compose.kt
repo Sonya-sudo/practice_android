@@ -53,7 +53,7 @@ class Compose : ComponentActivity() {
 fun ColorSearchScreen(modifier: Modifier = Modifier) {
     // Состояния
     var inputText by remember { mutableStateOf("") }
-    var buttonColor by remember { mutableStateOf(Color(0xFF6200EE)) } // Стандартный цвет кнопки
+    var buttonColor by remember { mutableStateOf(Color(0xFF6200EE)) }
 
     // Тег для логирования
     val logTag = "ColorSearch"
@@ -67,7 +67,7 @@ fun ColorSearchScreen(modifier: Modifier = Modifier) {
         // Поле ввода
         OutlinedTextField(
             value = inputText,
-            onValueChange = { inputText = it.lowercase() }, // Приводим к нижнему регистру для поиска
+            onValueChange = { inputText = it.lowercase() },
             label = { Text("Введите название цвета") },
             modifier = Modifier.fillMaxWidth(),
             singleLine = true
