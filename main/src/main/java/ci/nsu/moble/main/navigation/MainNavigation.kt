@@ -6,7 +6,6 @@ import com.arkivanov.decompose.value.MutableValue
 import kotlinx.parcelize.Parcelize
 import android.os.Parcelable
 
-// Список всех экранов (sealed class как требуется в задании)
 @Parcelize
 sealed class Screen : Parcelable {
     object Home : Screen()
@@ -15,7 +14,6 @@ sealed class Screen : Parcelable {
     data class Fourth(val text: String) : Screen()
 }
 
-// Интерфейс навигатора
 interface MainNavigator {
     val currentScreen: Value<Screen>
 
@@ -26,7 +24,6 @@ interface MainNavigator {
     fun goToSettings()
 }
 
-// Реализация навигатора
 class MainNavigatorImpl(
     componentContext: ComponentContext
 ) : MainNavigator, ComponentContext by componentContext {
