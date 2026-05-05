@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")  // для Room
+    id("androidx.navigation.safeargs.kotlin") // для Safe Args
 }
 
 android {
